@@ -1,6 +1,23 @@
 # Kimaris : Reverse Image Search
 
 This app can be used to search for images locally. (From the indexed folders)
+Two search methods are:
+ - Searching with text
+ - Reverse image search
+
+Can search through videos. Find an object in a video. Reverse image search in videos.
+
+#### Running the app
+
+Firstly add the folders you want to search through. Amount of time for the folder indexing depends on number of images and videos.
+Then you can search through the folders using the app.
+
+### How does it work
+
+Images pass through the YOLO model, that return objects and bounding boxes from the image. Image gets cut and all of the objects from the image get pass through the AutoEncoder encoder. The result is a code.
+Image also gets passed though the AutoEncoder encoder.
+Resulting information is stored in the database.
+
 
 ### Creating the enviroment
 conda create --name app python=3.11 

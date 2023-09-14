@@ -14,9 +14,24 @@ Then you can search through the folders using the app.
 
 ### How does it work
 
+#### Extracting image data
+
 Images pass through the YOLO model, that return objects and bounding boxes from the image. Image gets cut and all of the objects from the image get pass through the AutoEncoder encoder. The result is a code.
 Image also gets passed though the AutoEncoder encoder.
+Image gets described by the Image2Text model and that description gets vectorized by the Text2Vector.
 Resulting information is stored in the database.
+
+![d1](ImagesGit/1.drawio.png)
+
+#### Comparing images
+
+The input image gets passed through the image descritor extractor (previous text), and resulting information is comapred.
+
+![d1](ImagesGit/2.drawio.png)
+
+The comparison is shown in the following diagram:
+
+![d1](ImagesGit/3.drawio.png)
 
 
 ### Creating the enviroment
